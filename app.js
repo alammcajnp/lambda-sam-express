@@ -8,7 +8,7 @@ app.get("/hello", (req, res) =>
 );
 
 app.post("/helalamlo", (req, res) => {
-  const body = req.body;
+  const body = JSON.stringify(req.body);
 
   let name = `Hello Mr/Ms ${body.name} Your Welcome, Doest not matter Today what is, Matter is that What are you doing today for build yor tomorrow`;
 
