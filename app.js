@@ -1,8 +1,10 @@
 const express = require("express");
+const bodyParser = require("body-parser");
 const serverless = require("serverless-http");
 const app = express();
 
 app.use(express.json());
+app.use(bodyParser.json());
 
 // Define a route handler with unique parameter names
 app.get("/hello", (req, res) =>
