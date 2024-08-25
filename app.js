@@ -15,6 +15,12 @@ app.post("/helalamlo", (req, res) => {
   res.send(name);
 });
 
+app.post("/data", (req, res) => {
+  const requestData = req.body;
+  console.log("Received data:", requestData);
+  res.send(`Received data: ${JSON.stringify(requestData)}`);
+});
+
 // Start the server (useful for local testing)
 app.listen(3000, () => {
   console.log("App listening on port 3000");
